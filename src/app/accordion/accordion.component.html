@@ -1,0 +1,63 @@
+<div class="accordion" id="formAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" (click)="toggleAccordion('inflow')" aria-expanded="false" aria-controls="collapseOne">
+          Inflow Form
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" [ngClass]="{'show': isInflowExpanded}">
+        <div class="accordion-body">
+          <app-form></app-form>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button" type="button" (click)="toggleAccordion('assets')" aria-expanded="false" aria-controls="collapseTwo">
+          Current Assets & Savings Form
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" [ngClass]="{'show': isAssetsExpanded}">
+        <div class="accordion-body">
+          <app-assets-form></app-assets-form>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button" type="button" (click)="toggleAccordion('outflow')" aria-expanded="false" aria-controls="collapseThree">
+          Outflow Form
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" [ngClass]="{'show': isOutflowExpanded}">
+        <div class="accordion-body">
+          <app-outflow-form></app-outflow-form>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button" type="button" (click)="toggleAccordion('liability')" aria-expanded="false" aria-controls="collapseFour">
+          Current Liability Form
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" [ngClass]="{'show': isLiabilityExpanded}">
+        <div class="accordion-body">
+          <app-current-liability-form></app-current-liability-form>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button" type="button" (click)="toggleAccordion('actual')" aria-expanded="false" aria-controls="collapseFive">
+          Actual Form
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" [ngClass]="{'show': isActualExpanded}">
+        <div class="accordion-body">
+          <app-actual-form></app-actual-form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

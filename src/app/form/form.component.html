@@ -1,0 +1,31 @@
+<div class="form-container">
+    <h2>Inflow Form</h2>
+    <div class="mb-3">
+      <button class="btn btn-success me-2" (click)="addCategory()">Add Category</button>
+      <button class="btn btn-info me-2" (click)="addSubCategory()">Add SubCategory</button>
+      <button class="btn btn-primary" (click)="addInflowItem()">Add Inflow Item</button>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>SubCategory</th>
+            <th>Inflow Items</th>
+            <th>Amount (Per Month)</th>
+            <th>Amount (Yearly)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of categories; let i = index">
+            <td>{{ category }}</td>
+            <td>{{ subcategories[i] }}</td>
+            <td>{{ inflowItems[i] }}</td>
+            <td><input type="number" class="form-control" [(ngModel)]="amountsPerMonth[i]"></td>
+            <td><input type="number" class="form-control" [(ngModel)]="amountsYearly[i]"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

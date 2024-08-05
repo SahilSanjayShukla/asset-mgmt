@@ -1,0 +1,40 @@
+<div class="form-container">
+    <h2>Actual Form</h2>
+    <div class="mb-3">
+      <button class="btn btn-primary" (click)="addGoal()">Add Goal</button>
+    </div>
+    <div class="table-container">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Sr. No.</th>
+            <th>Name of the Goal Major Head</th>
+            <th>Name of the Goal Minor Head</th>
+            <th>Goal Planning Date</th>
+            <th>Required in Year (MM/YYYY)</th>
+            <th>Amount Required in Rs (Today’s Value)</th>
+            <th>Future Corpus Required in Rs (after considering Inflation of 7%)</th>
+            <th>Balance Amount Required in Rs (After considering growth on Cash Flows in previous years with 12% return)</th>
+            <th>Per month Contribution Required (Expected Return of 12%)</th>
+            <th>Remarks, if any</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let goal of goals">
+            <td>{{ goal.srNo }}</td>
+            <td><input type="text" class="form-control" [(ngModel)]="goal.majorHead"></td>
+            <td><input type="text" class="form-control" [(ngModel)]="goal.minorHead"></td>
+            <td><input type="date" class="form-control" [(ngModel)]="goal.planningDate"></td>
+            <td><input type="text" class="form-control" placeholder="MM/YYYY" [(ngModel)]="goal.requiredYear"></td>
+            <td><input type="number" class="form-control" [(ngModel)]="goal.amountRequiredToday"></td>
+            <td><input type="number" class="form-control" [(ngModel)]="goal.futureCorpusRequired"></td>
+            <td><input type="number" class="form-control" [(ngModel)]="goal.balanceAmountRequired"></td>
+            <td><input type="number" class="form-control" [(ngModel)]="goal.perMonthContribution"></td>
+            <td><input type="text" class="form-control" [(ngModel)]="goal.remarks"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </div>
+  

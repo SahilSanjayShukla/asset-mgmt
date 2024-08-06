@@ -1,0 +1,35 @@
+.accordion-button {
+    background-color: #6482AD; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    text-align: left; /* Align text to the left */
+    font-size: 1.25rem; /* Increase font size */
+    transition: background-color 0.2s ease-in-out; /* Add transition */
+  }
+  
+  .accordion-button:hover {
+    background-color: #6482AD; /* Darker green on hover */
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #6482AD; /* Darker green when expanded */
+  }
+  
+  .accordion-collapse {
+    max-height: 0; /* Initially hide */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.5s ease-out; /* Smooth slide down */
+  }
+  
+  .accordion-collapse.show {
+    max-height: 500px; /* Set a max height when expanded */
+    transition: max-height 0.5s ease-in; /* Smooth slide up */
+  }
+  
+  .accordion-body {
+    padding: 1rem; /* Padding */
+    background-color: #f9f9f9; /* Light grey background */
+    border-top: 1px solid #e7e7e7; /* Light grey border */
+  }
+  
